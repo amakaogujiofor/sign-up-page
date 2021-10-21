@@ -1,5 +1,9 @@
 /* font-family: 'Montserrat', sans-serif; */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -14,7 +18,7 @@ h1 {
   font-size: 2.25rem;
   font-weight: 300;
   color: #f2f2f2;
-  margin: 2em 0;
+  margin: 0;
 }
 
 h1 + p {
@@ -22,7 +26,7 @@ h1 + p {
   font-weight: 900;
   text-transform: uppercase;
   font-size: 1.3125rem;
-  margin: 1em;
+  margin: 0;
 }
 
 h2 {
@@ -36,20 +40,29 @@ h2 + p {
   text-transform: uppercase;
   margin-top: 0;
 }
+
 .top-text {
   font-size: 0.625rem;
   font-weight: 900;
   color: #ffc93c;
   text-transform: uppercase;
   order: -1;
+}
+
+/* .top-text::before {
+  content: normal;
   border-top: 4px solid #ffc93c;
   padding-top: 0;
   margin-top: 0;
-}
+} */
 
 .fine-print {
   font-size: 0.625rem;
   letter-spacing: 1px;
+}
+.free {
+  color: #ffc93c;
+  font-weight: 300;
 }
 
 /* Intro Section */
@@ -57,12 +70,85 @@ h2 + p {
 .intro {
   background-image: url("/images/computer.png");
   background-color: #2f1b41;
-  padding: 0.25em 2em;
+  background-size: cover;
+  background-position: center;
+  padding: 0.5em 2em;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
 }
+
+/* .container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container-intro {
+} */
 
 /* Main Content */
 .main-content {
   padding: 2em 1em;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Styling */
+
+/* .form-container {
+  margin: 0 auto;
+} */
+
+.signup {
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+button {
+  width: 150%;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  border: 1px solid #404040;
+}
+
+/* Media Queries */
+
+@media (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
