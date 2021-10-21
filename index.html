@@ -23,7 +23,7 @@
       <p class="top-text">Tech for everyone</p>
     </div>
 
-    <div class="main-content">
+    <div id="main-content" class="main-content">
       <h2>Become Sought After!!</h2>
       <p>Sign up today</p>
       <p>
@@ -33,10 +33,22 @@
         Register today for this life changing information session.
       </p>
       <div class="form-container">
-        <form class="signup" action="#" method="post">
-          <input type="text" id="fname" required placeholder="first name" />
+        <form id="form" class="signup" action="#" method="post">
+          <input
+            name="firstName"
+            type="text"
+            id="fname"
+            required
+            placeholder="first name"
+          />
           <br />
-          <input type="email" id="email" required placeholder="email" />
+          <input
+            name="emailAddress"
+            type="email"
+            id="email"
+            required
+            placeholder="email"
+          />
           <br />
           <button class="main-btn" type="submit">Register</button>
         </form>
@@ -46,5 +58,6 @@
         We'll never share your information without your permission
       </p>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>
